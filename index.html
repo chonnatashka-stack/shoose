@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Discover your next favorite sneakers. Minimal design, iconic sneakers.">
+  <title>SOLE — Sneaker Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">SOLE<span>.</span></a>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="cart-button" id="open-cart" aria-label="Open shopping cart">
+      Cart <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">THE NEW STANDARD</p>
+        <h1>FIND YOUR<br>OWN <span>PACE.</span></h1>
+        <p class="hero-description">
+          Carefully selected sneakers. Timeless style.
+          Your next favorite pair starts here.
+        </p>
+        <a href="#shop" class="button button-light">Explore collection ↗</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Featured sneaker"></div>
+      <span class="hero-index">01 / NEW SEASON</span>
+    </section>
+
+    <section class="shop section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>Latest drops<span>.</span></h2>
+        </div>
+        <p class="results-count" id="results-count">0 products</p>
+      </div>
+
+      <div class="shop-controls">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search sneakers..."
+            aria-label="Search sneakers"
+          >
+        </label>
+
+        <div class="filters" id="filters" aria-label="Product categories">
+          <button class="filter active" data-category="All">All</button>
+          <button class="filter" data-category="Nike">Nike</button>
+          <button class="filter" data-category="Adidas">Adidas</button>
+          <button class="filter" data-category="New Balance">New Balance</button>
+          <button class="filter" data-category="Other">Other</button>
+        </div>
+
+        <select id="sort-select" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="price-low">Price: Low to high</option>
+          <option value="price-high">Price: High to low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="about section" id="about">
+      <p class="eyebrow">LESS, BUT BETTER.</p>
+      <h2>Good shoes.<br>Good taste. <span>No noise.</span></h2>
+      <p>
+        We believe the right pair makes every outfit.
+        Discover timeless silhouettes and everyday essentials.
+      </p>
+      <a href="#shop" class="text-link">Find your pair ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo">SOLE<span>.</span></a>
+    <p>© <span id="year"></span> SOLE. All rights reserved.</p>
+    <a href="#shop">Back to shop ↑</a>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside
+    class="cart-drawer"
+    id="cart-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cart-title"
+    aria-hidden="true"
+    inert
+  >
+    <div class="cart-header">
+      <h2 id="cart-title">Your bag <span id="cart-title-count">(0)</span></h2>
+      <button class="icon-button" id="close-cart" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">€0.00</strong>
+      </div>
+      <button class="button button-dark checkout-button" id="checkout-button">
+        Checkout ↗
+      </button>
+      <p class="cart-note">Demo store · No payment is processed.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+S
